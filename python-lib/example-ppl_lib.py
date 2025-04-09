@@ -10,10 +10,8 @@ import ppl_lib # import the PythonPatreonList lib
 
 # MAIN
 def main():
-    client_id = "" # replace by your own - see https://www.patreon.com/portal/registration/register-clients
-    client_secret = "" # replace by your own - see https://www.patreon.com/portal/registration/register-clients
     creator_id = "" # replace by your own - see https://www.patreon.com/portal/registration/register-clients
-    patreonlister = ppl_lib.patreonlister(client_id,client_secret,creator_id) # create a patreonlister object
+    patreonlister = ppl_lib.patreonlister(creator_id) # create a patreonlister object
 
     print(patreonlister.get_memberships_count()) # return a dict with the number of patrons for each membership
     print(patreonlister.get_patrons()) # return the list of all patrons

@@ -12,14 +12,12 @@ import patreon
 class patreonlister:
     """
     Class initializer
-	Input : client id, client secret, creator id - see https://www.patreon.com/portal/registration/register-clients
+	Input : creator id - see https://www.patreon.com/portal/registration/register-clients
 	Require : none
 	Output : none
 	Causes : the patreonlister object is initialized
     """
-    def __init__(self, client_id, client_secret, creator_id):
-        self.client_id = client_id
-        self.client_secret = client_secret
+    def __init__(self, creator_id):
         self.creator_id = creator_id
         self.api_client = patreon.API(creator_id) # initialize the patreon API client from the official patreon lib
 
@@ -31,7 +29,7 @@ class patreonlister:
 	Causes : the patreonlister informations are returned
     """
     def __str__(self):
-        return f"patreonlister(client_id={self.client_id},client_secret={self.client_secret},creator_id={self.creator_id})"
+        return f"patreonlister(creator_id={self.creator_id})"
     
     """
     Get the number of patrons for each membership

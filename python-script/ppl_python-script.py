@@ -9,9 +9,7 @@ Python script to get patrons list from Patreon
 import patreon
 
 # PATREON ID & KEYS
-# client id, client secret, creator id - see https://www.patreon.com/portal/registration/register-clients
-client_id = ''
-client_secret = ''
+# creator id - see https://www.patreon.com/portal/registration/register-clients
 creator_id = ''
 
 # MAIN
